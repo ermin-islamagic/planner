@@ -1,0 +1,12 @@
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+*/cache/!.htaccess
+application/config/database.php
+application/logs/*
+.gitignore
+application/controllers/Welcome.php
+application/views/welcome_message.php
+*/index.html
