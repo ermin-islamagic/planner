@@ -4,7 +4,7 @@
 */cache/*
 */cache/!index.html
 */cache/!.htaccess
-*/index.html
+*index.html
 .gitignore
 application/config/database.php
 application/logs/*
