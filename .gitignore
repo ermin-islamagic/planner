@@ -4,9 +4,9 @@
 */cache/*
 */cache/!index.html
 */cache/!.htaccess
+*/index.html
+.gitignore
 application/config/database.php
 application/logs/*
-.gitignore
 application/controllers/Welcome.php
 application/views/welcome_message.php
-*/index.html
