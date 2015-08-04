@@ -1,2 +1,2 @@
 # planner
-weekly execution
+weekly execution planner
