@@ -514,8 +514,8 @@ $config['site_config'] = array(
         'legal' => 'Legal',
         'projects' => 'Projects',
         'org-and-hr' => 'Org&amp;Hr',
+        'sales' => 'Sales',
         'people' => 'People',
         'suppliers' => 'Suppliers',
-        'sales' => 'Sales',
     )
 );
