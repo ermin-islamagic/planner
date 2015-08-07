@@ -1,0 +1,20 @@
+/**
+ * Created by PhpStorm.
+ * User: Ermin Islamagic
+ * Web: http://islamagic.com/
+ * Date: 8/7/2015
+ * Time: 9:40 PM
+ */
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/FuturaBT-ExtraBlackCondensed.eot?#iefix') format('embedded-opentype'),  url('../fonts/FuturaBT-ExtraBlackCondensed.woff') format('woff'), url('../fonts/FuturaBT-ExtraBlackCondensed.ttf')  format('truetype'), url('../fonts/FuturaBT-ExtraBlackCondensed.svg#FuturaBT-ExtraBlackCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SansProReg';
+    src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-Regular.otf')  format('opentype'),
+    url('../fonts/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf')  format('truetype'), url('../fonts/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

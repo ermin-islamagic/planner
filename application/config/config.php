@@ -29,7 +29,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ $config['enable_hooks'] = FALSE;
 | http://codeigniter.com/user_guide/general/creating_libraries.html
 |
 */
-$config['subclass_prefix'] = 'MY_';
+$config['subclass_prefix'] = 'CO_';
 
 /*
 |--------------------------------------------------------------------------
@@ -305,7 +305,7 @@ $config['cache_query_string'] = FALSE;
 | http://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'kZpKDQju5zAPg4NFUpa2Cbpv';
 
 /*
 |--------------------------------------------------------------------------
@@ -498,3 +498,14 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+/*
+|--------------------------------------------------------------------------
+| User defined custom config
+|--------------------------------------------------------------------------
+|
+*/
+$config['site_config'] = array(
+    'logo' => 'https://placeholdit.imgix.net/~text?txtsize=33&txt=logo&w=320&h=87',
+    'text' => 'COP'
+);
