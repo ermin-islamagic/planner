@@ -10,3 +10,4 @@ application/config/database.php
 application/logs/*
 application/controllers/Welcome.php
 application/views/welcome_message.php
+application/config/config.php
