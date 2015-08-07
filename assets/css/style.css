@@ -1,0 +1,42 @@
+/**
+ * Created by PhpStorm.
+ * User: Ermin Islamagic
+ * Web: http://islamagic.com/
+ * Date: 8/7/2015
+ * Time: 9:40 PM
+ */
+body{ color: #a29f9e; background-color: #e1e1e1; }
+.navbar{ min-height: 70px; border-radius: 0; }
+.navbar-brand{ padding: 25px 15px; height: 70px; }
+header .navbar-default{ background-color: #504844; }
+.navbar-default .navbar-brand span,
+.navbar-default .navbar-brand a{ display: inline-block; vertical-align: middle; font-family: Futura; text-decoration: none; line-height: 0.7; }
+.navbar-default .navbar-brand a{ font-size: 33px; color: #a39b98; text-transform: uppercase; }
+.navbar-default .navbar-brand a:last-child{ color: #ffffff; }
+.navbar-default .navbar-brand span{ font-size: 26px; color: #ffffff; vertical-align: top; }
+.navbar-nav > li > span, .navbar-nav > li > a { padding-top: 25px; padding-bottom: 25px; display: inline-block; font-family: SansProReg; font-size: 12px; }
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{ color: #7D7674; }
+
+.navbar-default .navbar-nav > li > a{ color: #a29f9e; }
+
+.navbar-toggle{ padding: 10px; border-radius: 0px; margin: 16px 16px 16px 4px;; }
+@media (max-width: 767px) {
+    li.splitter{ display:none }
+    .navbar-nav > li > span, .navbar-nav > li > a { padding: 10px 15px; }
+}
+
+.nav-pills > li{ background-color: #e9e9e9; color: #c3c3c3; }
+.nav-pills > li > a{ border-radius: 0; font-size: 23px; font-family: GotBld; text-decoration: none; text-transform: uppercase; color: #504844; }
+.nav-pills > li + li{ margin-left: 1%; }
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{ color: #504844; background-color: #f6f6f6; }
+.nav-pills > li.active > a i.fa-angle-right:before, .nav-pills > li.active > a:hover i.fa-angle-right:before, .nav-pills > li.active > a:focus i.fa-angle-right:before { content: "\f107"; }
+.nav-pills > li > a i.fa{ border-radius: 50%; color: #6c6662; background: linear-gradient(#d9d9d9, #fff); font-size: 20px; width: 20px; margin-left: 15px; }
+@media (max-width: 768px) and (min-width: 992px) {
+    .nav-pills > li > a i.fa{ margin-left: 0; }
+}
+
+
+.thumbnail{ border-radius: 0; }
+
+footer{ background-color: #504844; padding: 8px 0; position: absolute; bottom: 0; width: 100%; }
+footer span{ font-family: SansProReg; color: #d0cecd; font-size: 13px; }

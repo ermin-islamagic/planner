@@ -18,3 +18,9 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'GotBld';
+    src: url('../fonts/TradeGothicW01-BoldCn20.eot?#iefix') format('embedded-opentype'),  url('../fonts/TradeGothicW01-BoldCn20.woff') format('woff'), url('../fonts/TradeGothicW01-BoldCn20.ttf')  format('truetype'), url('../fonts/TradeGothicW01-BoldCn20.svg#TradeGothicW01-BoldCn20') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
