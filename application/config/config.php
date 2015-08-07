@@ -507,5 +507,15 @@ $config['proxy_ips'] = '';
 */
 $config['site_config'] = array(
     'logo' => 'https://placeholdit.imgix.net/~text?txtsize=33&txt=logo&w=320&h=87',
-    'text' => 'COP'
+    'text' => 'COP',
+    'page_name' => 'Finance',
+    'can_see_navigation' => array(
+        'finance' => 'Finance',
+        'legal' => 'Legal',
+        'projects' => 'Projects',
+        'org-and-hr' => 'Org&amp;Hr',
+        'people' => 'People',
+        'suppliers' => 'Suppliers',
+        'sales' => 'Sales',
+    )
 );

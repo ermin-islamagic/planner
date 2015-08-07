@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends CO_Controller
+class Sales extends CO_Controller
 {
 
     public function __construct()
@@ -12,25 +12,25 @@ class Users extends CO_Controller
     public function create()
     {
 
-        $this->render(array('users/index'));
+        $this->render();
     }
 
     public function index()
     {
 
-        $this->render(array('users/index'));
+        $this->render();
     }
 
     public function update()
     {
 
-        $this->render(array('users/index'));
+        $this->render();
     }
 
     public function delete()
     {
 
-        $this->render(array('users/index'));
+        $this->render();
     }
 
 }
