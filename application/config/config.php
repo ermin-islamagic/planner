@@ -508,14 +508,17 @@ $config['proxy_ips'] = '';
 $config['site_config'] = array(
     'logo' => 'https://placeholdit.imgix.net/~text?txtsize=33&txt=logo&w=320&h=87',
     'text' => 'COP',
-    'page_name' => 'Finance',
     'can_see_navigation' => array(
         'finance' => 'Finance',
         'legal' => 'Legal',
-        'projects' => 'Projects',
         'org-and-hr' => 'Org&amp;Hr',
+        'planner' => 'Planner',
+        'projects' => 'Projects',
         'sales' => 'Sales',
         'people' => 'People',
         'suppliers' => 'Suppliers',
-    )
+    ),
+    'standard_navigation' => array(
+        'profile' => 'Profile'
+    ),
 );

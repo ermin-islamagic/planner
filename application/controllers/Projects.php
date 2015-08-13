@@ -3,34 +3,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Projects extends CO_Controller
 {
-
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function create()
-    {
-
-        $this->render();
-    }
-
     public function index()
     {
+        $this->render(array('pages/' . $this->_controller_slug . '/read'));
+    }
 
-        $this->render();
+    public function create()
+    {
+        $this->render(array('pages/' . $this->_controller_slug . '/create'));
     }
 
     public function update()
     {
-
-        $this->render();
+        $this->render(array('pages/' . $this->_controller_slug . '/update'));
     }
 
     public function delete()
     {
-
-        $this->render();
+        $this->render(array('pages/' . $this->_controller_slug . '/delete'));
     }
-
 }

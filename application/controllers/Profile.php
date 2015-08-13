@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class People extends CO_Controller
+class Profile extends CO_Controller
 {
     public function __construct()
     {

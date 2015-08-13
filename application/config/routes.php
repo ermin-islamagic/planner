@@ -49,20 +49,90 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'dashboard';
+$route['default_controller'] = 'Finance';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
+$route['finance'] =                                            "Finance";
+
+/* CRUD ITEM */
+$route['finance/type/(:any)'] =                                "Finance/type/$1";
+$route['finance/create'] =                                     "Finance/create";
+$route['finance/type/(:any)/update/(:num)'] =                  "Finance/type/$1/update/$2";
+$route['finance/type/(:any)/delete/(:num)'] =                  "Finance/delete/$1";
+
+/* CRUD TYPE */
+$route['finance/type_create'] =                                "Finance/typeCreate";
+$route['finance/type/(:any)/type_update'] =                    "Finance/typeUpdate";
+$route['finance/type/(:any)/type_delete/(:num)'] =             "Finance/typeDelete/$1";
+
+//$route['finance/type/(:any)/search/(:any)'] =                "Finance/type/$1/search/$2";
+//$route['finance/type/(:any)/search/(:any)/(:num)'] =         "Finance/type/$1/search/$2/$3";
 
 
-$route['finance'] = "Finance";
-$route['legal'] = "Legal";
+$route['legal'] =                                              "Legal";
+
+/* CRUD ITEM */
+$route['legal/type/(:any)'] =                                  "Legal/type/$1";
+$route['legal/create'] =                                       "Legal/create";
+$route['legal/type/(:any)/update/(:num)'] =                    "Legal/type/$1/update/$2";
+$route['legal/type/(:any)/delete/(:num)'] =                    "Legal/delete/$1";
+
+/* CRUD TYPE */
+$route['legal/type_create'] =                                  "Legal/typeCreate";
+$route['legal/type/(:any)/type_update'] =                      "Legal/typeUpdate";
+$route['legal/type/(:any)/type_delete/(:num)'] =               "Legal/typeDelete/$1";
+
+//$route['legal/type/(:any)/search/(:any)'] =                  "Legal/type/$1/search/$2";
+//$route['legal/type/(:any)/search/(:any)/(:num)'] =           "Legal/type/$1/search/$2/$3";
+
+
+
+$route['org-and-hr'] =                                         "OrgAndHr";
+
+/* CRUD ITEM */
+$route['org-and-hr/type/(:any)'] =                             "OrgAndHr/type/$1";
+$route['org-and-hr/create'] =                                  "OrgAndHr/create";
+$route['org-and-hr/type/(:any)/update/(:num)'] =               "OrgAndHr/type/$1/update/$2";
+$route['org-and-hr/type/(:any)/delete/(:num)'] =               "OrgAndHr/delete/$1";
+
+/* CRUD TYPE */
+$route['org-and-hr/type_create'] =                             "OrgAndHr/typeCreate";
+$route['org-and-hr/type/(:any)/type_update'] =                 "OrgAndHr/typeUpdate";
+$route['org-and-hr/type/(:any)/type_delete/(:num)'] =          "OrgAndHr/typeDelete/$1";
+
+//$route['org-and-hr/type/(:any)/search/(:any)'] =             "OrgAndHr/type/$1/search/$2";
+//$route['org-and-hr/type/(:any)/search/(:any)/(:num)'] =      "OrgAndHr/type/$1/search/$2/$3";
+
+
+$route['planner'] = "Planner";
+
+/* CRUD ITEM */
+$route['planner/type/(:any)'] =                             "planner/type/$1";
+$route['planner/create'] =                                  "planner/create";
+$route['planner/type/(:any)/update/(:num)'] =               "planner/type/$1/update/$2";
+$route['planner/type/(:any)/delete/(:num)'] =               "planner/delete/$1";
+
+/* CRUD TYPE */
+$route['planner/type_create'] =                             "planner/typeCreate";
+$route['planner/type/(:any)/type_update'] =                 "planner/typeUpdate";
+$route['planner/type/(:any)/type_delete/(:num)'] =          "planner/typeDelete/$1";
+
+//$route['planner/type/(:any)/search/(:any)'] =             "planner/type/$1/search/$2";
+//$route['planner/type/(:any)/search/(:any)/(:num)'] =      "planner/type/$1/search/$2/$3";
+
+
+
+
 $route['projects'] = "Projects";
-$route['org-and-hr'] = "OrgAndHr";
+
 $route['people'] = "People";
 $route['suppliers'] = "Suppliers";
 $route['sales'] = "Sales";
+
+
+$route['profile'] = "Profile";
 
 
 
