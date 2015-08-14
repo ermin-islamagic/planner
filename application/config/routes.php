@@ -49,9 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'Finance';
+$route['default_controller'] = "authentication";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['register'] = "authentication/register";
+$route['logout'] = "authentication/logout";
+$route['forgot'] = "authentication/forgot";
+$route['new_password/(:any)'] = "authentication/new_password/$1";
 
 
 $route['finance'] =                                            "Finance";
@@ -63,9 +68,9 @@ $route['finance/type/(:any)/update/(:num)'] =                  "Finance/type/$1/
 $route['finance/type/(:any)/delete/(:num)'] =                  "Finance/delete/$1";
 
 /* CRUD TYPE */
-$route['finance/type_create'] =                                "Finance/typeCreate";
-$route['finance/type/(:any)/type_update'] =                    "Finance/typeUpdate";
-$route['finance/type/(:any)/type_delete/(:num)'] =             "Finance/typeDelete/$1";
+$route['finance/create_type'] =                                "Finance/createType";
+$route['finance/type/(:any)/update_type'] =                    "Finance/updateType";
+$route['finance/type/(:any)/delete_type/(:num)'] =             "Finance/deleteType/$1";
 
 //$route['finance/type/(:any)/search/(:any)'] =                "Finance/type/$1/search/$2";
 //$route['finance/type/(:any)/search/(:any)/(:num)'] =         "Finance/type/$1/search/$2/$3";
@@ -80,30 +85,32 @@ $route['legal/type/(:any)/update/(:num)'] =                    "Legal/type/$1/up
 $route['legal/type/(:any)/delete/(:num)'] =                    "Legal/delete/$1";
 
 /* CRUD TYPE */
-$route['legal/type_create'] =                                  "Legal/typeCreate";
-$route['legal/type/(:any)/type_update'] =                      "Legal/typeUpdate";
-$route['legal/type/(:any)/type_delete/(:num)'] =               "Legal/typeDelete/$1";
+$route['legal/create_type'] =                                  "Legal/createType";
+$route['legal/type/(:any)/update_type'] =                      "Legal/updateType";
+$route['legal/type/(:any)/delete_type/(:num)'] =               "Legal/deleteType/$1";
 
 //$route['legal/type/(:any)/search/(:any)'] =                  "Legal/type/$1/search/$2";
 //$route['legal/type/(:any)/search/(:any)/(:num)'] =           "Legal/type/$1/search/$2/$3";
 
 
-
-$route['org-and-hr'] =                                         "OrgAndHr";
+$route['organisation'] =                                         "Organisation";
 
 /* CRUD ITEM */
-$route['org-and-hr/type/(:any)'] =                             "OrgAndHr/type/$1";
-$route['org-and-hr/create'] =                                  "OrgAndHr/create";
-$route['org-and-hr/type/(:any)/update/(:num)'] =               "OrgAndHr/type/$1/update/$2";
-$route['org-and-hr/type/(:any)/delete/(:num)'] =               "OrgAndHr/delete/$1";
+$route['organisation/type/(:any)'] =                             "Organisation/type/$1";
+$route['organisation/create'] =                                  "Organisation/create";
+$route['organisation/type/(:any)/update/(:num)'] =               "Organisation/type/$1/update/$2";
+$route['organisation/type/(:any)/delete/(:num)'] =               "Organisation/delete/$1";
 
 /* CRUD TYPE */
-$route['org-and-hr/type_create'] =                             "OrgAndHr/typeCreate";
-$route['org-and-hr/type/(:any)/type_update'] =                 "OrgAndHr/typeUpdate";
-$route['org-and-hr/type/(:any)/type_delete/(:num)'] =          "OrgAndHr/typeDelete/$1";
+$route['organisation/create_type'] =                             "Organisation/createType";
+$route['organisation/type/(:any)/update_type'] =                 "Organisation/updateType";
+$route['organisation/type/(:any)/delete_type/(:num)'] =          "Organisation/deleteType/$1";
 
-//$route['org-and-hr/type/(:any)/search/(:any)'] =             "OrgAndHr/type/$1/search/$2";
-//$route['org-and-hr/type/(:any)/search/(:any)/(:num)'] =      "OrgAndHr/type/$1/search/$2/$3";
+//$route['organisation/type/(:any)/search/(:any)'] =             "Organisation/type/$1/search/$2";
+//$route['organisation/type/(:any)/search/(:any)/(:num)'] =      "Organisation/type/$1/search/$2/$3";
+
+$route['organisation/create_user'] =                             "Organisation/createUser";
+$route['organisation/list_users'] =                             "Organisation/listUsers";
 
 
 $route['planner'] = "Planner";
@@ -115,26 +122,79 @@ $route['planner/type/(:any)/update/(:num)'] =               "planner/type/$1/upd
 $route['planner/type/(:any)/delete/(:num)'] =               "planner/delete/$1";
 
 /* CRUD TYPE */
-$route['planner/type_create'] =                             "planner/typeCreate";
-$route['planner/type/(:any)/type_update'] =                 "planner/typeUpdate";
-$route['planner/type/(:any)/type_delete/(:num)'] =          "planner/typeDelete/$1";
+$route['planner/create_type'] =                             "planner/createType";
+$route['planner/type/(:any)/update_type'] =                 "planner/updateType";
+$route['planner/type/(:any)/delete_type/(:num)'] =          "planner/deleteType/$1";
 
 //$route['planner/type/(:any)/search/(:any)'] =             "planner/type/$1/search/$2";
 //$route['planner/type/(:any)/search/(:any)/(:num)'] =      "planner/type/$1/search/$2/$3";
 
 
-
-
 $route['projects'] = "Projects";
 
-$route['people'] = "People";
+/* CRUD ITEM */
+$route['projects/type/(:any)'] =                             "projects/type/$1";
+$route['projects/create'] =                                  "projects/create";
+$route['projects/type/(:any)/update/(:num)'] =               "projects/type/$1/update/$2";
+$route['projects/type/(:any)/delete/(:num)'] =               "projects/delete/$1";
+
+/* CRUD TYPE */
+$route['projects/create_type'] =                             "projects/createType";
+$route['projects/type/(:any)/update_type'] =                 "projects/updateType";
+$route['projects/type/(:any)/delete_type/(:num)'] =          "projects/deleteType/$1";
+
+//$route['projects/type/(:any)/search/(:any)'] =             "projects/type/$1/search/$2";
+//$route['projects/type/(:any)/search/(:any)/(:num)'] =      "projects/type/$1/search/$2/$3";
+
+
 $route['suppliers'] = "Suppliers";
+
+/* CRUD ITEM */
+$route['suppliers/type/(:any)'] =                             "suppliers/type/$1";
+$route['suppliers/create'] =                                  "suppliers/create";
+$route['suppliers/type/(:any)/update/(:num)'] =               "suppliers/type/$1/update/$2";
+$route['suppliers/type/(:any)/delete/(:num)'] =               "suppliers/delete/$1";
+
+/* CRUD TYPE */
+$route['suppliers/create_type'] =                             "suppliers/createType";
+$route['suppliers/type/(:any)/update_type'] =                 "suppliers/updateType";
+$route['suppliers/type/(:any)/delete_type/(:num)'] =          "suppliers/deleteType/$1";
+
+//$route['suppliers/type/(:any)/search/(:any)'] =             "suppliers/type/$1/search/$2";
+//$route['suppliers/type/(:any)/search/(:any)/(:num)'] =      "suppliers/type/$1/search/$2/$3";
+
+
+$route['people'] = "People";
+
+/* CRUD ITEM */
+$route['people/type/(:any)'] =                             "people/type/$1";
+$route['people/create'] =                                  "people/create";
+$route['people/type/(:any)/update/(:num)'] =               "people/type/$1/update/$2";
+$route['people/type/(:any)/delete/(:num)'] =               "people/delete/$1";
+
+/* CRUD TYPE */
+$route['people/create_type'] =                             "people/createType";
+$route['people/type/(:any)/update_type'] =                 "people/updateType";
+$route['people/type/(:any)/delete_type/(:num)'] =          "people/deleteType/$1";
+
+//$route['people/type/(:any)/search/(:any)'] =             "people/type/$1/search/$2";
+//$route['people/type/(:any)/search/(:any)/(:num)'] =      "people/type/$1/search/$2/$3";
+
+
 $route['sales'] = "Sales";
 
+/* CRUD ITEM */
+$route['sales/type/(:any)'] =                             "sales/type/$1";
+$route['sales/create'] =                                  "sales/create";
+$route['sales/type/(:any)/update/(:num)'] =               "sales/type/$1/update/$2";
+$route['sales/type/(:any)/delete/(:num)'] =               "sales/delete/$1";
+
+/* CRUD TYPE */
+$route['sales/create_type'] =                             "sales/createType";
+$route['sales/type/(:any)/update_type'] =                 "sales/updateType";
+$route['sales/type/(:any)/delete_type/(:num)'] =          "sales/deleteType/$1";
+
+//$route['sales/type/(:any)/search/(:any)'] =             "sales/type/$1/search/$2";
+//$route['sales/type/(:any)/search/(:any)/(:num)'] =      "sales/type/$1/search/$2/$3";
 
 $route['profile'] = "Profile";
-
-
-
-
-

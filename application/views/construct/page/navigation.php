@@ -1,4 +1,4 @@
-
+<?php if($_current_user): ?>
 <section>
     <h2 class="sr-only">Page navigation</h2>
     <div class="container">
@@ -13,3 +13,4 @@
 
     </div>
 </section>
+<?php endif; ?>

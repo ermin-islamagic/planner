@@ -19,14 +19,14 @@
 
             <?php if($this->uri->segment(3) !== 'all' && $this->uri->segment(3) !== NULL): ?>
                 <li>
-                    <a href="<?php echo current_url(); ?>/type_update" title="Edit selected document type">
+                    <a href="<?php echo current_url(); ?>/update_type" title="Edit selected document type">
                         <i class="fa fa-edit"></i>
                     </a>
                 </li>
             <?php endif; ?>
 
             <li>
-                <a href="<?php echo site_url($this->uri->segment(1)); ?>/type_create" title="Add new document type">
+                <a href="<?php echo site_url($this->uri->segment(1)); ?>/create_type" title="Add new document type">
                     <i class="fa fa-plus"></i>
                 </a>
             </li>

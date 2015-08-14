@@ -18,7 +18,7 @@
             <?php endforeach; ?>
 
             <li>
-                <a href="<?php echo site_url($this->uri->segment(1)); ?>/type_create" title="Add new document type">
+                <a href="<?php echo site_url($this->uri->segment(1)); ?>/create_type" title="Add new document type">
                     <i class="fa fa-plus"></i>
                 </a>
             </li>

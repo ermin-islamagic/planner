@@ -28,31 +28,42 @@
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
+
+                            <?php if($_current_user): ?>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
+                            <?php endif; ?>
+
                             <div class="navbar-brand">
-                                <a href="<?php echo site_url('/finance'); ?>" class="logo"><?php echo $_site_config['text']; ?></a>
+                                <a href="<?php echo site_url('/'); ?>" class="logo"><?php echo $_site_config['text']; ?></a>
                                 <span>|</span>
-                                <a href="<?php echo site_url('/finance'); ?>" class="logo"><?php $title = (array_key_exists($this->uri->segment(1), $_site_config['can_see_navigation'])) ? $_site_config['can_see_navigation'][$this->uri->segment(1)] : $_site_config['standard_navigation'][$this->uri->segment(1)]; echo strtoupper($title); ?></a>
+                                <a href="<?php echo site_url('/'); ?>" class="logo">
+                                    <?php
+                                    $title_replacement = (array_key_exists($this->uri->segment(1), $_site_config['standard_navigation'])) ? $_site_config['standard_navigation'][$this->uri->segment(1)] : 'Authentication';
+                                    $title = (array_key_exists($this->uri->segment(1), $_site_config['can_see_navigation'])) ? $_site_config['can_see_navigation'][$this->uri->segment(1)] : $title_replacement;
+                                    echo strtoupper($title);
+                                    ?>
+                                </a>
                             </div>
                         </div>
 
+                        <?php if($_current_user): ?>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><span>Welcome, </span><a href="<?php echo site_url('profile'); ?>">User!</a></li>
+                                <li><span>Welcome, </span><a href="<?php echo site_url('profile'); ?>"><?php echo $_current_user->name; ?>!</a></li>
                                 <li class="splitter"><span>|</span></li>
-                                <li><a href="#">Logout</a></li>
+                                <li><a href="<?php echo site_url('logout'); ?>">Logout</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
+                        <?php endif; ?>
+
                     </div><!-- /.container-fluid -->
                 </div><!-- /.container -->
             </nav>
 
         </header>
-
-        <?php echo (isset($navigation)) ? $navigation : ''; ?>
