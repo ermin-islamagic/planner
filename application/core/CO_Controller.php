@@ -88,6 +88,7 @@ class CO_Controller extends CI_Controller
     public function index($current_page = null)
     {
         // Build pagination
+        if(isset($this->connection))
         $this->_data['pagination_setting'] = $this->connection->build_pagination($this->_controller_slug);
 
         // Load data items.
@@ -104,6 +105,12 @@ class CO_Controller extends CI_Controller
     
     public function create()
     {
+        // Save userfile
+        $data = $this->connection->save_file();
+
+        print_r($data);
+
+        // Render views
         $this->render(array('pages/' . $this->_controller_slug . '/create'),$this->_data);
     }
 

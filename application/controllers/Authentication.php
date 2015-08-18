@@ -13,7 +13,7 @@ class Authentication extends CO_Controller {
         $this->load->library('form_validation');
     }
 
-    public function index()
+    public function index($current_page = NULL)
     {
         $user = $this->authentication_m->read_information();
 

@@ -6,6 +6,8 @@
 */cache/!.htaccess
 *index.html
 .gitignore
+.idea
+.idea/*
 application/config/database.php
 application/logs/*
 application/controllers/Welcome.php

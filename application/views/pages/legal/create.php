@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
 
-                <form class="form-horizontal" action="<?php echo current_url(); ?>" method="POST">
+                <form class="form-horizontal" action="<?php echo current_url(); ?>" method="POST" enctype="multipart/form-data">
                     <fieldset>
 
                         <!-- Form Name -->
@@ -25,9 +25,9 @@
 
                         <!-- File Button -->
                         <div class="form-group">
-                            <label class="col-md-2 control-label" for="upload-file">Upload agreement</label>
+                            <label class="col-md-2 control-label" for="userfile">Upload agreement</label>
                             <div class="col-md-10">
-                                <input id="upload-file" name="upload-file" class="input-file" type="file">
+                                <input id="userfile" name="userfile" class="input-file" type="file" size="20">
                             </div>
                         </div>
 

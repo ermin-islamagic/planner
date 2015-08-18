@@ -279,4 +279,26 @@ class CO_Model extends CI_Model
         return $query->result();
     }
 
+    /**
+     * Function saves one file only
+     *
+     * @param string $field Field name
+     * @return array Return array
+     */
+    public function save_file($field = 'userfile'){
+
+        // File upload config
+        $config = $this->config->item('save_file');
+
+        // Init config
+        $this->load->library('upload', $config);
+
+        // Upload file
+        if(!$this->upload->do_upload($field)){
+            return array('error' => $this->upload->display_errors());
+        }else{
+            return array('upload_data' => $this->upload->data());
+        }
+    }
+
 }

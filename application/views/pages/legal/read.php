@@ -41,53 +41,16 @@
     <h2 class="sr-only">Items section</h2>
     <div class="container">
 
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail outline">
-                    <a href="<?php echo site_url($this->uri->segment(1)); ?>/create"><img src="https://placeholdit.imgix.net/~text?txtsize=133&amp;txt=%2B&amp;w=780&amp;h=420" alt=""></a>
-                </div>
-            </div>
-
-            <div data-items="legal">
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=80&amp;txt=AGREEMENT%201&amp;w=780&amp;h=420" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=80&amp;txt=AGREEMENT%202&amp;w=780&amp;h=420" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=80&amp;txt=AGREEMENT%203&amp;w=780&amp;h=420" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=80&amp;txt=AGREEMENT%204&amp;w=780&amp;h=420" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=80&amp;txt=AGREEMENT%205&amp;w=780&amp;h=420" alt=""></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
         <div class="table-responsive">
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>File</th>
                     <th>Created</th>
                     <?php if((int)$_current_user->role > 5): ?>
+                        <th style="max-width: 30px;">Add <a href="<?php echo site_url($this->uri->segment(1)); ?>/create"><i class="fa fa-plus"></i></a></th>
                         <th style="max-width: 30px;">Edit</th>
                         <th style="max-width: 30px;">Delete</th>
                     <?php endif; ?>
@@ -97,8 +60,9 @@
                 <?php foreach($rows as $row):?>
                     <tr>
                         <td><?php echo $row->id; ?></td>
-                        <td><?php echo $row->name; ?></td>
-                        <td><?php echo date("d M. Y" , strtotime($row->created) ); ?></td>
+                        <td><?php echo $row->type; ?></td>
+                        <td><?php echo $row->file; ?></td>
+                        <td colspan="2"><?php echo date("d M. Y" , strtotime($row->created) ); ?></td>
                         <?php if((int)$_current_user->role > 5): ?>
                             <td><a href="<?php echo $pagination_setting['base_url'] . "/update/$row->id"; ?>"><i class="fa fa-edit"></i></a></td>
                             <td><a href="<?php echo $pagination_setting['base_url'] . "/delete/$row->id"; ?>" class="remove-action"><i class="fa fa-trash"></i></a></td>

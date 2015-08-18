@@ -529,3 +529,9 @@ $config['site_config'] = array(
         'profile' => 'Profile'
     ),
 );
+
+$config['documents'] = array(
+    'upload_path'   => FCPATH . 'media/documents/',
+    'allowed_types' => 'txt|pdf|doc|docx|xls|xlsx|ppt',
+    'max_size'      => '10240'
+);
