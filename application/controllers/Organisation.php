@@ -29,6 +29,6 @@ class Organisation extends CO_Controller
      * List users
      * */
     public function listUsers(){
-        $this->connection->getUsers();
+        print_r($this->connection->getUsers())  ;
     }
 }

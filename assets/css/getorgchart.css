@@ -1,0 +1,1686 @@
+.get-org-chart .get-oc-c, .get-org-chart .get-oc-tb, .get-org-chart input, .get-org-chart table, .get-org-chart a {
+    /*font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, "sans-serif"*/
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+.get-org-chart {
+    /*background-color: #E0ECF8;*/
+    /*background-color: #E9E9E9;*/
+    background-color: #ffffff;
+    position: relative;
+    height: 100%
+}
+
+.get-org-chart input, .get-org-chart select {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #BABABA;
+    color: #212121;
+    /*font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, "sans-serif";*/
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 4px 8px;
+    width: 260px;
+    line-height: 20px;
+    margin-bottom: 10px
+}
+
+.get-org-chart select {
+    margin-top: 11px
+}
+
+.get-org-chart input:focus, .get-org-chart select:focus {
+    border-color: #5C5C5C;
+    outline: medium none
+}
+
+.get-org-chart input:hover, .get-org-chart select:hover {
+    border-color: #8F8F8F
+}
+
+.get-org-chart .get-oc-c {
+    width: 100%;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    overflow: hidden
+}
+
+.get-org-chart .get-oc-c svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0
+}
+
+.get-org-chart .get-oc-c .get-box {
+    fill: #094AB2;
+    stroke-width: 2px;
+    stroke: #094AB2
+}
+
+.get-org-chart .get-oc-c .name {
+    fill: #d7d7d7;
+    font-size: 16px
+}
+
+.get-org-chart .get-oc-c .get-text {
+    fill: #939597;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.get-org-chart .get-oc-c .get-text.two{
+    fill: #ffffff;
+}
+
+.get-org-chart .get-oc-c .link {
+    stroke: #686868;
+    fill: none
+}
+
+.get-org-chart .get-oc-c .get-text-0 {
+    font-size: 16px
+}
+
+.get-org-chart .get-oc-tb {
+    z-index: 1
+}
+
+.get-org-chart .get-oc-tb a.get-left {
+    /*background: url(../img/graphics.png) -182px 0;*/
+    float: right;
+    margin: 11px 0 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-right {
+    /*background: url(../img/graphics.png) -130px 0;*/
+    float: right;
+    margin: 11px 10px 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-up {
+    /*background: url(../img/graphics.png) -52px 0;*/
+    float: right;
+    margin: 11px 0 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-down {
+    /*background: url(../img/graphics.png) -234px 0;*/
+    float: right;
+    margin: 11px 0 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-plus {
+    /*background: url(../img/graphics.png) -26px 0;*/
+    float: right;
+    margin: 11px 10px 0 3px;
+    border: 0
+}
+
+.get-org-chart .get-oc-tb a.get-minus {
+    /*background: url(../img/graphics.png) 0 0;*/
+    float: right;
+    margin: 11px 10px 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-add {
+    /*background: url(../img/graphics.png) -260px 0;*/
+    float: right;
+    margin: 11px 10px 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-next {
+    /*background: url(../img/graphics.png) -104px 0;*/
+    margin: 11px 3px 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-prev {
+    /*background: url(../img/graphics.png) -156px 0;*/
+    margin: 11px 3px 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-grid-view {
+    /*background: url(../img/graphics.png) -208px 0;*/
+    float: right;
+    margin: 11px 10px 0 3px
+}
+
+.get-org-chart .get-oc-tb a.get-print {
+    /*background: url(../img/graphics.png) -312px 0;*/
+    float: right;
+    margin: 11px 10px 0 3px
+}
+
+.get-org-chart .get-oc-tb a {
+    float: left;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+    text-decoration: none;
+    border: 0;
+    display: none;
+    color: #c3c3c3;
+}
+.get-org-chart .get-oc-tb a:hover {
+    color: #504844;
+}
+
+.get-org-chart .get-oc-tb input {
+    float: left;
+    margin: 8px 10px 0 8px;
+    display: none
+}
+
+.get-org-chart .get-oc-tb {
+    height: 46px;
+    background-color: #F6F6F6;
+    border-bottom: 2px solid #C7C7C7;
+    width: 100%;
+    position: absolute;
+    overflow: hidden
+}
+
+.get-org-chart .get-oc-tb > div {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+.get-org-chart .get-oc-tb .get-disabled {
+    opacity: .2;
+    cursor: default
+}
+
+.get-org-chart .get-oc-tb a.get-prev-page {
+    /*background: url(../img/graphics.png) -156px 0;*/
+    margin: 11px 3px 0 17px;
+    display: inherit
+}
+
+.get-org-chart .get-oc-tb a.get-delete {
+    /*background: url(../img/graphics.png) -286px 0;*/
+    margin: 11px 10px 0 10px;
+    float: right
+}
+
+.get-org-chart .get-oc-tb a.get-save {
+    /*background: url(../img/graphics.png) -78px 0;*/
+    margin: 11px 3px 0 10px;
+    float: right
+}
+
+.get-org-chart .get-oc-v {
+    overflow-y: scroll;
+    width: 100%;
+    position: absolute;
+    top: -9999px;
+    left: -9999px
+}
+
+.get-org-chart .get-oc-v .get-image-pane {
+    float: left;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    left: -200px
+}
+
+.get-org-chart .get-oc-v .get-data-pane {
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 480px
+}
+
+.get-org-chart .get-oc-v .get-label {
+    line-height: 23px;
+    font-size: 12px;
+    color: #2b2b2b
+}
+
+.get-org-chart .get-user-logo {
+    fill: #CEDBF0
+}
+
+.get-org-chart .get-oc-g {
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    top: -9999px;
+    left: -9999px
+}
+
+.get-org-chart .get-oc-g table {
+    width: 100%
+}
+
+.get-org-chart .get-oc-g th {
+    text-align: left;
+    padding: 3px 0 3px 7px;
+    color: white;
+    text-transform: uppercase
+}
+
+.get-org-chart .get-oc-g td {
+    padding: 3px 0 3px 7px;
+    border-bottom: 1px solid #C7C7C7;
+    border-right: 1px solid #C7C7C7;
+    text-align: left;
+    font-weight: normal
+}
+
+.get-org-chart .get-oc-g .get-odd td {
+    background-color: #f5f5f5
+}
+
+.get-darkred.get-org-chart {
+    /*background-color: #FFE3EA;*/
+    /*background-color: transparent;*/
+}
+
+.get-darkred.get-org-chart .get-oc-tb {
+    /*background-color: #AC193D*/
+}
+
+.get-darkred.get-org-chart .get-oc-c .get-box {
+    /*fill: #AC193D;*/
+    /*stroke: #C60031;*/
+    /*fill: transparent;*/
+    fill: #C3C3C3;
+    stroke: #C3C3C3;
+}
+
+.get-darkred.get-org-chart .get-user-logo {
+    /*fill: #FFB9CA*/
+}
+
+.get-darkred.get-org-chart .get-oc-g th {
+    background-color: #AC193D
+}
+
+.get-darkred.get-org-chart .get-def-stop-1 {
+    stop-color: #851d36
+}
+
+.get-darkred.get-org-chart .get-def-stop-2 {
+    stop-color: #AC193D
+}
+
+div.get-org-chart .get-oc-c .get-darkred .get-box {
+    fill: #AC193D;
+    stroke: #C60031
+}
+
+.get-pink.get-org-chart {
+    background-color: #FFDFF4
+}
+
+.get-pink.get-org-chart .get-oc-tb {
+    background-color: #DC4FAD
+}
+
+.get-pink.get-org-chart .get-oc-c .get-box {
+    fill: #DC4FAD;
+    stroke: #A6006E
+}
+
+.get-pink.get-org-chart .get-user-logo {
+    fill: #FFAFE4
+}
+
+.get-pink.get-org-chart .get-oc-g th {
+    background-color: #DC4FAD
+}
+
+.get-pink.get-org-chart .get-def-stop-1 {
+    stop-color: #a73f84
+}
+
+.get-pink.get-org-chart .get-def-stop-2 {
+    stop-color: #DC4FAD
+}
+
+div.get-org-chart .get-oc-c .get-pink .get-box {
+    fill: #DC4FAD;
+    stroke: #A6006E
+}
+
+.get-darkorange.get-org-chart {
+    background-color: #FFEAE5
+}
+
+.get-darkorange.get-org-chart .get-oc-tb {
+    background-color: #D24726
+}
+
+.get-darkorange.get-org-chart .get-oc-c .get-box {
+    fill: #D24726;
+    stroke: #D82B00
+}
+
+.get-darkorange.get-org-chart .get-user-logo {
+    fill: #FFCBBF
+}
+
+.get-darkorange.get-org-chart .get-oc-g th {
+    background-color: #D24726
+}
+
+.get-darkorange.get-org-chart .get-def-stop-1 {
+    stop-color: #a3381f
+}
+
+.get-darkorange.get-org-chart .get-def-stop-2 {
+    stop-color: #D24726
+}
+
+div.get-org-chart .get-oc-c .get-darkorange .get-box {
+    fill: #D24726;
+    stroke: #D82B00
+}
+
+.get-orange.get-org-chart {
+    background-color: #FFEFE5
+}
+
+.get-orange.get-org-chart .get-oc-tb {
+    background-color: #FF8F32
+}
+
+.get-orange.get-org-chart .get-oc-c .get-box {
+    fill: #FF8F32;
+    stroke: #D85A00
+}
+
+.get-orange.get-org-chart .get-user-logo {
+    fill: #FFD9BF
+}
+
+.get-orange.get-org-chart .get-oc-g th {
+    background-color: #FF8F32
+}
+
+.get-orange.get-org-chart .get-def-stop-1 {
+    stop-color: #c66f27
+}
+
+.get-orange.get-org-chart .get-def-stop-2 {
+    stop-color: #FF8F32
+}
+
+div.get-org-chart .get-oc-c .get-orange .get-box {
+    fill: #FF8F32;
+    stroke: #D85A00
+}
+
+.get-lightgreen.get-org-chart {
+    background-color: #F7FFE5
+}
+
+.get-lightgreen.get-org-chart .get-oc-tb {
+    background-color: #82BA00
+}
+
+.get-lightgreen.get-org-chart .get-oc-c .get-box {
+    fill: #82BA00;
+    stroke: #97D800
+}
+
+.get-lightgreen.get-org-chart .get-user-logo {
+    fill: #EBFFBF
+}
+
+.get-lightgreen.get-org-chart .get-oc-g th {
+    background-color: #82BA00
+}
+
+.get-lightgreen.get-org-chart .get-def-stop-1 {
+    stop-color: #587e00
+}
+
+.get-lightgreen.get-org-chart .get-def-stop-2 {
+    stop-color: #82BA00
+}
+
+div.get-org-chart .get-oc-c .get-lightgreen .get-box {
+    fill: #82BA00;
+    stroke: #97D800
+}
+
+.get-green.get-org-chart {
+    background-color: #E5FFE9
+}
+
+.get-green.get-org-chart .get-oc-tb {
+    background-color: #008A17
+}
+
+.get-green.get-org-chart .get-oc-c .get-box {
+    fill: #008A17;
+    stroke: #00D827
+}
+
+.get-green.get-org-chart .get-user-logo {
+    fill: #BFFFCA
+}
+
+.get-green.get-org-chart .get-oc-g th {
+    background-color: #008A17
+}
+
+.get-green.get-org-chart .get-def-stop-1 {
+    stop-color: #00510d
+}
+
+.get-green.get-org-chart .get-def-stop-2 {
+    stop-color: #008A17
+}
+
+div.get-org-chart .get-oc-c .get-green .get-box {
+    fill: #008A17;
+    stroke: #00D827
+}
+
+.get-lightteal.get-org-chart {
+    background-color: #E5FFFF
+}
+
+.get-lightteal.get-org-chart .get-oc-tb {
+    background-color: #03B3B2
+}
+
+.get-lightteal.get-org-chart .get-oc-c .get-box {
+    fill: #03B3B2;
+    stroke: #00D8D8
+}
+
+.get-lightteal.get-org-chart .get-user-logo {
+    fill: #BFFFFF
+}
+
+.get-lightteal.get-org-chart .get-oc-g th {
+    background-color: #03B3B2
+}
+
+.get-lightteal.get-org-chart .get-def-stop-1 {
+    stop-color: #027e7d
+}
+
+.get-lightteal.get-org-chart .get-def-stop-2 {
+    stop-color: #03B3B2
+}
+
+div.get-org-chart .get-oc-c .get-lightteal .get-box {
+    fill: #03B3B2;
+    stroke: #00D8D8
+}
+
+.get-teal.get-org-chart {
+    background-color: #E5FBFF
+}
+
+.get-teal.get-org-chart .get-oc-tb {
+    background-color: #008299
+}
+
+.get-teal.get-org-chart .get-oc-c .get-box {
+    fill: #008299;
+    stroke: #00BBD8
+}
+
+.get-teal.get-org-chart .get-user-logo {
+    fill: #BFF6FF
+}
+
+.get-teal.get-org-chart .get-oc-g th {
+    background-color: #008299
+}
+
+.get-teal.get-org-chart .get-def-stop-1 {
+    stop-color: #01505e
+}
+
+.get-teal.get-org-chart .get-def-stop-2 {
+    stop-color: #008299
+}
+
+div.get-org-chart .get-oc-c .get-teal .get-box {
+    fill: #008299;
+    stroke: #00BBD8
+}
+
+.get-lightblue.get-org-chart {
+    background-color: #E5F2FF
+}
+
+.get-lightblue.get-org-chart .get-oc-tb {
+    background-color: #5DB2FF
+}
+
+.get-lightblue.get-org-chart .get-oc-c .get-box {
+    fill: #5DB2FF;
+    stroke: #0073D8
+}
+
+.get-lightblue.get-org-chart .get-user-logo {
+    fill: #BFE1FF
+}
+
+.get-lightblue.get-org-chart .get-oc-g th {
+    background-color: #5DB2FF
+}
+
+.get-lightblue.get-org-chart .get-def-stop-1 {
+    stop-color: #437eb4
+}
+
+.get-lightblue.get-org-chart .get-def-stop-2 {
+    stop-color: #5DB2FF
+}
+
+div.get-org-chart .get-oc-c .get-lightblue .get-box {
+    fill: #5DB2FF;
+    stroke: #0073D8
+}
+
+.get-blue.get-org-chart {
+    background-color: #E5F4FF
+}
+
+.get-blue.get-org-chart .get-oc-tb {
+    background-color: #0072C6
+}
+
+.get-blue.get-org-chart .get-oc-c .get-box {
+    fill: #0072C6;
+    stroke: #0081D8
+}
+
+.get-blue.get-org-chart .get-user-logo {
+    fill: #BFE5FF
+}
+
+.get-blue.get-org-chart .get-oc-g th {
+    background-color: #0072C6
+}
+
+.get-blue.get-org-chart .get-def-stop-1 {
+    stop-color: #015593
+}
+
+.get-blue.get-org-chart .get-def-stop-2 {
+    stop-color: #0072C6
+}
+
+div.get-org-chart .get-oc-c .get-blue .get-box {
+    fill: #0072C6;
+    stroke: #0081D8
+}
+
+.get-darkpurple.get-org-chart {
+    background-color: #E9E1FF
+}
+
+.get-darkpurple.get-org-chart .get-oc-tb {
+    background-color: #4617B4
+}
+
+.get-darkpurple.get-org-chart .get-oc-c .get-box {
+    fill: #4617B4;
+    stroke: #3600C2
+}
+
+.get-darkpurple.get-org-chart .get-user-logo {
+    fill: #CBB7FF
+}
+
+.get-darkpurple.get-org-chart .get-oc-g th {
+    background-color: #4617B4
+}
+
+.get-darkpurple.get-org-chart .get-def-stop-1 {
+    stop-color: #361583
+}
+
+.get-darkpurple.get-org-chart .get-def-stop-2 {
+    stop-color: #4617B4
+}
+
+div.get-org-chart .get-oc-c .get-darkpurple .get-box {
+    fill: #4617B4;
+    stroke: #3600C2
+}
+
+.get-purple.get-org-chart {
+    background-color: #FCDDFF
+}
+
+.get-purple.get-org-chart .get-oc-tb {
+    background-color: #8C0095
+}
+
+.get-purple.get-org-chart .get-oc-c .get-box {
+    fill: #8C0095;
+    stroke: #880092
+}
+
+.get-purple.get-org-chart .get-user-logo {
+    fill: #F9A9FF
+}
+
+.get-purple.get-org-chart .get-oc-g th {
+    background-color: #8C0095
+}
+
+.get-purple.get-org-chart .get-def-stop-1 {
+    stop-color: #610167
+}
+
+.get-purple.get-org-chart .get-def-stop-2 {
+    stop-color: #8C0095
+}
+
+div.get-org-chart .get-oc-c .get-purple .get-box {
+    fill: #8C0095;
+    stroke: #880092
+}
+
+.get-mediumdarkblue.get-org-chart {
+    background-color: #E5F3FF
+}
+
+.get-mediumdarkblue.get-org-chart .get-oc-tb {
+    background-color: #004B8B
+}
+
+.get-mediumdarkblue.get-org-chart .get-oc-c .get-box {
+    fill: #004B8B;
+    stroke: #007AD8
+}
+
+.get-mediumdarkblue.get-org-chart .get-user-logo {
+    fill: #BFE3FF
+}
+
+.get-mediumdarkblue.get-org-chart .get-oc-g th {
+    background-color: #004B8B
+}
+
+.get-mediumdarkblue.get-org-chart .get-def-stop-1 {
+    stop-color: #002c51
+}
+
+.get-mediumdarkblue.get-org-chart .get-def-stop-2 {
+    stop-color: #004B8B
+}
+
+div.get-org-chart .get-oc-c .get-mediumdarkblue .get-box {
+    fill: #004B8B;
+    stroke: #007AD8
+}
+
+.get-darkblue.get-org-chart {
+    background-color: #E5EFFF
+}
+
+.get-darkblue.get-org-chart .get-oc-tb {
+    background-color: #001940
+}
+
+.get-darkblue.get-org-chart .get-oc-c .get-box {
+    fill: #001940;
+    stroke: #0056D8
+}
+
+.get-darkblue.get-org-chart .get-user-logo {
+    fill: #BFD8FF
+}
+
+.get-darkblue.get-org-chart .get-oc-g th {
+    background-color: #001940
+}
+
+.get-darkblue.get-org-chart .get-def-stop-1 {
+    stop-color: #000711
+}
+
+.get-darkblue.get-org-chart .get-def-stop-2 {
+    stop-color: #001940
+}
+
+div.get-org-chart .get-oc-c .get-darkblue .get-box {
+    fill: #001940;
+    stroke: #0056D8
+}
+
+.get-cordovan.get-org-chart {
+    background-color: #FFE5E5
+}
+
+.get-cordovan.get-org-chart .get-oc-tb {
+    background-color: #570000
+}
+
+.get-cordovan.get-org-chart .get-oc-c .get-box {
+    fill: #570000;
+    stroke: #280000
+}
+
+.get-cordovan.get-org-chart .get-user-logo {
+    fill: #FFBFBF
+}
+
+.get-cordovan.get-org-chart .get-oc-g th {
+    background-color: #570000
+}
+
+.get-cordovan.get-org-chart .get-def-stop-1 {
+    stop-color: #2a0000
+}
+
+.get-cordovan.get-org-chart .get-def-stop-2 {
+    stop-color: #570000
+}
+
+div.get-org-chart .get-oc-c .get-cordovan .get-box {
+    fill: #570000;
+    stroke: #280000
+}
+
+.get-darkcordovan.get-org-chart {
+    background-color: #FFE5E5
+}
+
+.get-darkcordovan.get-org-chart .get-oc-tb {
+    background-color: #380000
+}
+
+.get-darkcordovan.get-org-chart .get-oc-c .get-box {
+    fill: #380000;
+    stroke: #0E0000
+}
+
+.get-darkcordovan.get-org-chart .get-user-logo {
+    fill: #FFBFBF
+}
+
+.get-darkcordovan.get-org-chart .get-oc-g th {
+    background-color: #380000
+}
+
+.get-darkcordovan.get-org-chart .get-def-stop-1 {
+    stop-color: #140000
+}
+
+.get-darkcordovan.get-org-chart .get-def-stop-2 {
+    stop-color: #380000
+}
+
+div.get-org-chart .get-oc-c .get-darkcordovan .get-box {
+    fill: #380000;
+    stroke: #0E0000
+}
+
+.get-neutralgrey.get-org-chart {
+    background-color: #E6E6E6
+}
+
+.get-neutralgrey.get-org-chart .get-oc-tb {
+    background-color: #585858
+}
+
+.get-neutralgrey.get-org-chart .get-oc-c .get-box {
+    fill: #585858;
+    stroke: #1A1A1A
+}
+
+.get-neutralgrey.get-org-chart .get-user-logo {
+    fill: #CCC
+}
+
+.get-neutralgrey.get-org-chart .get-oc-g th {
+    background-color: #585858
+}
+
+.get-neutralgrey.get-org-chart .get-def-stop-1 {
+    stop-color: #2b2b2b
+}
+
+.get-neutralgrey.get-org-chart .get-def-stop-2 {
+    stop-color: #585858
+}
+
+div.get-org-chart .get-oc-c .get-neutralgrey .get-box {
+    fill: #585858;
+    stroke: #1A1A1A
+}
+
+.get-black.get-org-chart {
+    background-color: #CCC
+}
+
+.get-black.get-org-chart .get-oc-tb {
+    background-color: #000
+}
+
+.get-black.get-org-chart .get-oc-c .get-box {
+    fill: #000;
+    stroke: #000
+}
+
+.get-black.get-org-chart .get-user-logo {
+    fill: #808080
+}
+
+.get-black.get-org-chart .get-oc-g th {
+    background-color: #000
+}
+
+.get-black.get-org-chart .get-def-stop-1 {
+    stop-color: #000
+}
+
+.get-black.get-org-chart .get-def-stop-2 {
+    stop-color: #000
+}
+
+div.get-org-chart .get-oc-c .get-black .get-box {
+    fill: #000;
+    stroke: #000
+}
+
+.get-cassandra.get-org-chart .get-oc-c .get-box {
+    fill: none;
+    stroke-width: 6
+}
+
+.get-cassandra.get-darkred.get-org-chart .get-oc-c .get-box {
+    stroke: #AC193D
+}
+
+.get-cassandra.get-darkred.get-org-chart .get-oc-c .get-text {
+    fill: #AC193D
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkred .get-box {
+    stroke: #AC193D
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkred .get-text {
+    fill: #AC193D
+}
+
+.get-cassandra.get-pink.get-org-chart .get-oc-c .get-box {
+    stroke: #DC4FAD
+}
+
+.get-cassandra.get-pink.get-org-chart .get-oc-c .get-text {
+    fill: #DC4FAD
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-pink .get-box {
+    stroke: #DC4FAD
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-pink .get-text {
+    fill: #DC4FAD
+}
+
+.get-cassandra.get-darkorange.get-org-chart .get-oc-c .get-box {
+    stroke: #D24726
+}
+
+.get-cassandra.get-darkorange.get-org-chart .get-oc-c .get-text {
+    fill: #D24726
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkorange .get-box {
+    stroke: #D24726
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkorange .get-text {
+    fill: #D24726
+}
+
+.get-cassandra.get-orange.get-org-chart .get-oc-c .get-box {
+    stroke: #FF8F32
+}
+
+.get-cassandra.get-orange.get-org-chart .get-oc-c .get-text {
+    fill: #FF8F32
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-orange .get-box {
+    stroke: #FF8F32
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-orange .get-text {
+    fill: #FF8F32
+}
+
+.get-cassandra.get-lightgreen.get-org-chart .get-oc-c .get-box {
+    stroke: #82BA00
+}
+
+.get-cassandra.get-lightgreen.get-org-chart .get-oc-c .get-text {
+    fill: #82BA00
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-lightgreen .get-box {
+    stroke: #82BA00
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-lightgreen .get-text {
+    fill: #82BA00
+}
+
+.get-cassandra.get-green.get-org-chart .get-oc-c .get-box {
+    stroke: #008A17
+}
+
+.get-cassandra.get-green.get-org-chart .get-oc-c .get-text {
+    fill: #008A17
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-green .get-box {
+    stroke: #008A17
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-green .get-text {
+    fill: #008A17
+}
+
+.get-cassandra.get-lightteal.get-org-chart .get-oc-c .get-box {
+    stroke: #03B3B2
+}
+
+.get-cassandra.get-lightteal.get-org-chart .get-oc-c .get-text {
+    fill: #03B3B2
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-lightteal .get-box {
+    stroke: #03B3B2
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-lightteal .get-text {
+    fill: #03B3B2
+}
+
+.get-cassandra.get-teal.get-org-chart .get-oc-c .get-box {
+    stroke: #008299
+}
+
+.get-cassandra.get-teal.get-org-chart .get-oc-c .get-text {
+    fill: #008299
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-teal .get-box {
+    stroke: #008299
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-teal .get-text {
+    fill: #008299
+}
+
+.get-cassandra.get-lightblue.get-org-chart .get-oc-c .get-box {
+    stroke: #5DB2FF
+}
+
+.get-cassandra.get-lightblue.get-org-chart .get-oc-c .get-text {
+    fill: #5DB2FF
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-lightblue .get-box {
+    stroke: #5DB2FF
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-lightblue .get-text {
+    fill: #5DB2FF
+}
+
+.get-cassandra.get-blue.get-org-chart .get-oc-c .get-box {
+    stroke: #0072C6
+}
+
+.get-cassandra.get-blue.get-org-chart .get-oc-c .get-text {
+    fill: #0072C6
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-blue .get-box {
+    stroke: #0072C6
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-blue .get-text {
+    fill: #0072C6
+}
+
+.get-cassandra.get-darkpurple.get-org-chart .get-oc-c .get-box {
+    stroke: #4617B4
+}
+
+.get-cassandra.get-darkpurple.get-org-chart .get-oc-c .get-text {
+    fill: #4617B4
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkpurple .get-box {
+    stroke: #4617B4
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkpurple .get-text {
+    fill: #4617B4
+}
+
+.get-cassandra.get-purple.get-org-chart .get-oc-c .get-box {
+    stroke: #8C0095
+}
+
+.get-cassandra.get-purple.get-org-chart .get-oc-c .get-text {
+    fill: #8C0095
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-purple .get-box {
+    stroke: #8C0095
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-purple .get-text {
+    fill: #8C0095
+}
+
+.get-cassandra.get-mediumdarkblue.get-org-chart .get-oc-c .get-box {
+    stroke: #004B8B
+}
+
+.get-cassandra.get-mediumdarkblue.get-org-chart .get-oc-c .get-text {
+    fill: #004B8B
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-mediumdarkblue .get-box {
+    stroke: #004B8B
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-mediumdarkblue .get-text {
+    fill: #004B8B
+}
+
+.get-cassandra.get-darkblue.get-org-chart .get-oc-c .get-box {
+    stroke: #001940
+}
+
+.get-cassandra.get-darkblue.get-org-chart .get-oc-c .get-text {
+    fill: #001940
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkblue .get-box {
+    stroke: #001940
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkblue .get-text {
+    fill: #001940
+}
+
+.get-cassandra.get-cordovan.get-org-chart .get-oc-c .get-box {
+    stroke: #570000
+}
+
+.get-cassandra.get-cordovan.get-org-chart .get-oc-c .get-text {
+    fill: #570000
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-cordovan .get-box {
+    stroke: #570000
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-cordovan .get-text {
+    fill: #570000
+}
+
+.get-cassandra.get-darkcordovan.get-org-chart .get-oc-c .get-box {
+    stroke: #380000
+}
+
+.get-cassandra.get-darkcordovan.get-org-chart .get-oc-c .get-text {
+    fill: #380000
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkcordovan .get-box {
+    stroke: #380000
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-darkcordovan .get-text {
+    fill: #380000
+}
+
+.get-cassandra.get-neutralgrey.get-org-chart .get-oc-c .get-box {
+    stroke: #585858
+}
+
+.get-cassandra.get-neutralgrey.get-org-chart .get-oc-c .get-text {
+    fill: #585858
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-neutralgrey .get-box {
+    stroke: #585858
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-neutralgrey .get-text {
+    fill: #585858
+}
+
+.get-cassandra.get-black.get-org-chart .get-oc-c .get-box {
+    stroke: #000
+}
+
+.get-cassandra.get-black.get-org-chart .get-oc-c .get-text {
+    fill: #000
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-black .get-box {
+    stroke: #000
+}
+
+div.get-cassandra.get-org-chart .get-oc-c .get-black .get-text {
+    fill: #000
+}
+
+.get-deborah.get-org-chart .get-oc-c .get-box {
+    fill-opacity: 0;
+    stroke-width: 10
+}
+
+.get-cop.get-darkred.get-org-chart .get-text-pane {
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #A7A9AC;
+}
+.get-cop.get-darkred.get-org-chart .get-text-pane.one {
+    stroke: #5ACAF2;
+}
+.get-cop.get-darkred.get-org-chart .get-text-pane.two {
+    fill: #939597;
+    stroke: #939597;
+}
+
+
+
+
+.get-deborah.get-darkred.get-org-chart .get-text-pane {
+    fill: #AC193D;
+    fill-opacity: .5
+}
+
+.get-deborah.get-darkred.get-org-chart .get-oc-c .get-box {
+    stroke: #AC193D
+}
+
+div.get-deborah.get-org-chart .get-darkred .get-text-pane {
+    fill: #AC193D;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-darkred .get-box {
+    stroke: #AC193D
+}
+
+.get-deborah.get-pink.get-org-chart .get-text-pane {
+    fill: #DC4FAD;
+    fill-opacity: .5
+}
+
+.get-deborah.get-pink.get-org-chart .get-oc-c .get-box {
+    stroke: #DC4FAD
+}
+
+div.get-deborah.get-org-chart .get-pink .get-text-pane {
+    fill: #DC4FAD;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-pink .get-box {
+    stroke: #DC4FAD
+}
+
+.get-deborah.get-darkorange.get-org-chart .get-text-pane {
+    fill: #D24726;
+    fill-opacity: .5
+}
+
+.get-deborah.get-darkorange.get-org-chart .get-oc-c .get-box {
+    stroke: #D24726
+}
+
+div.get-deborah.get-org-chart .get-darkorange .get-text-pane {
+    fill: #D24726;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-darkorange .get-box {
+    stroke: #D24726
+}
+
+.get-deborah.get-orange.get-org-chart .get-text-pane {
+    fill: #FF8F32;
+    fill-opacity: .5
+}
+
+.get-deborah.get-orange.get-org-chart .get-oc-c .get-box {
+    stroke: #FF8F32
+}
+
+div.get-deborah.get-org-chart .get-orange .get-text-pane {
+    fill: #FF8F32;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-orange .get-box {
+    stroke: #FF8F32
+}
+
+.get-deborah.get-lightgreen.get-org-chart .get-text-pane {
+    fill: #82BA00;
+    fill-opacity: .5
+}
+
+.get-deborah.get-lightgreen.get-org-chart .get-oc-c .get-box {
+    stroke: #82BA00
+}
+
+div.get-deborah.get-org-chart .get-lightgreen .get-text-pane {
+    fill: #82BA00;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-lightgreen .get-box {
+    stroke: #82BA00
+}
+
+.get-deborah.get-green.get-org-chart .get-text-pane {
+    fill: #008A17;
+    fill-opacity: .5
+}
+
+.get-deborah.get-green.get-org-chart .get-oc-c .get-box {
+    stroke: #008A17
+}
+
+div.get-deborah.get-org-chart .get-green .get-text-pane {
+    fill: #008A17;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-green .get-box {
+    stroke: #008A17
+}
+
+.get-deborah.get-lightteal.get-org-chart .get-text-pane {
+    fill: #03B3B2;
+    fill-opacity: .5
+}
+
+.get-deborah.get-lightteal.get-org-chart .get-oc-c .get-box {
+    stroke: #03B3B2
+}
+
+div.get-deborah.get-org-chart .get-lightteal .get-text-pane {
+    fill: #03B3B2;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-lightteal .get-box {
+    stroke: #03B3B2
+}
+
+.get-deborah.get-teal.get-org-chart .get-text-pane {
+    fill: #008299;
+    fill-opacity: .5
+}
+
+.get-deborah.get-teal.get-org-chart .get-oc-c .get-box {
+    stroke: #008299
+}
+
+div.get-deborah.get-org-chart .get-teal .get-text-pane {
+    fill: #008299;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-teal .get-box {
+    stroke: #008299
+}
+
+.get-deborah.get-lightblue.get-org-chart .get-text-pane {
+    fill: #5DB2FF;
+    fill-opacity: .5
+}
+
+.get-deborah.get-lightblue.get-org-chart .get-oc-c .get-box {
+    stroke: #5DB2FF
+}
+
+div.get-deborah.get-org-chart .get-lightblue .get-text-pane {
+    fill: #5DB2FF;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-lightblue .get-box {
+    stroke: #5DB2FF
+}
+
+.get-deborah.get-blue.get-org-chart .get-text-pane {
+    fill: #0072C6;
+    fill-opacity: .5
+}
+
+.get-deborah.get-blue.get-org-chart .get-oc-c .get-box {
+    stroke: #0072C6
+}
+
+div.get-deborah.get-org-chart .get-blue .get-text-pane {
+    fill: #0072C6;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-blue .get-box {
+    stroke: #0072C6
+}
+
+.get-deborah.get-darkpurple.get-org-chart .get-text-pane {
+    fill: #4617B4;
+    fill-opacity: .5
+}
+
+.get-deborah.get-darkpurple.get-org-chart .get-oc-c .get-box {
+    stroke: #4617B4
+}
+
+div.get-deborah.get-org-chart .get-darkpurple .get-text-pane {
+    fill: #4617B4;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-darkpurple .get-box {
+    stroke: #4617B4
+}
+
+.get-deborah.get-purple.get-org-chart .get-text-pane {
+    fill: #8C0095;
+    fill-opacity: .5
+}
+
+.get-deborah.get-purple.get-org-chart .get-oc-c .get-box {
+    stroke: #8C0095
+}
+
+div.get-deborah.get-org-chart .get-purple .get-text-pane {
+    fill: #8C0095;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-purple .get-box {
+    stroke: #8C0095
+}
+
+.get-deborah.get-mediumdarkblue.get-org-chart .get-text-pane {
+    fill: #004B8B;
+    fill-opacity: .5
+}
+
+.get-deborah.get-mediumdarkblue.get-org-chart .get-oc-c .get-box {
+    stroke: #004B8B
+}
+
+div.get-deborah.get-org-chart .get-mediumdarkblue .get-text-pane {
+    fill: #004B8B;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-mediumdarkblue .get-box {
+    stroke: #004B8B
+}
+
+.get-deborah.get-darkblue.get-org-chart .get-text-pane {
+    fill: #001940;
+    fill-opacity: .5
+}
+
+.get-deborah.get-darkblue.get-org-chart .get-oc-c .get-box {
+    stroke: #001940
+}
+
+div.get-deborah.get-org-chart .get-darkblue .get-text-pane {
+    fill: #001940;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-darkblue .get-box {
+    stroke: #001940
+}
+
+.get-deborah.get-cordovan.get-org-chart .get-text-pane {
+    fill: #570000;
+    fill-opacity: .5
+}
+
+.get-deborah.get-cordovan.get-org-chart .get-oc-c .get-box {
+    stroke: #570000
+}
+
+div.get-deborah.get-org-chart .get-cordovan .get-text-pane {
+    fill: #570000;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-cordovan .get-box {
+    stroke: #570000
+}
+
+.get-deborah.get-darkcordovan.get-org-chart .get-text-pane {
+    fill: #380000;
+    fill-opacity: .5
+}
+
+.get-deborah.get-darkcordovan.get-org-chart .get-oc-c .get-box {
+    stroke: #380000
+}
+
+div.get-deborah.get-org-chart .get-darkcordovan .get-text-pane {
+    fill: #380000;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-darkcordovan .get-box {
+    stroke: #380000
+}
+
+.get-deborah.get-neutralgrey.get-org-chart .get-text-pane {
+    fill: #585858;
+    fill-opacity: .5
+}
+
+.get-deborah.get-neutralgrey.get-org-chart .get-oc-c .get-box {
+    stroke: #585858
+}
+
+div.get-deborah.get-org-chart .get-neutralgrey .get-text-pane {
+    fill: #585858;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-neutralgrey .get-box {
+    stroke: #585858
+}
+
+.get-deborah.get-black.get-org-chart .get-text-pane {
+    fill: #000;
+    fill-opacity: .5
+}
+
+.get-deborah.get-black.get-org-chart .get-oc-c .get-box {
+    stroke: #000
+}
+
+div.get-deborah.get-org-chart .get-black .get-text-pane {
+    fill: #000;
+    fill-opacity: .5
+}
+
+div.get-deborah.get-org-chart .get-oc-c .get-black .get-box {
+    stroke: #000
+}
+
+.get-helen.get-darkred.get-org-chart .get-oc-c .get-text {
+    fill: #AC193D
+}
+
+.get-helen.get-pink.get-org-chart .get-oc-c .get-text {
+    fill: #DC4FAD
+}
+
+.get-helen.get-darkorange.get-org-chart .get-oc-c .get-text {
+    fill: #D24726
+}
+
+.get-helen.get-orange.get-org-chart .get-oc-c .get-text {
+    fill: #FF8F32
+}
+
+
+.get-helen.get-lightgreen.get-org-chart .get-oc-c .get-text {
+    fill: #82BA00
+}
+
+.get-helen.get-green.get-org-chart .get-oc-c .get-text {
+    fill: #008A17
+}
+
+.get-helen.get-lightteal.get-org-chart .get-oc-c .get-text {
+    fill: #03B3B2
+}
+
+.get-helen.get-teal.get-org-chart .get-oc-c .get-text {
+    fill: #008299
+}
+
+.get-helen.get-lightblue.get-org-chart .get-oc-c .get-text {
+    fill: #5DB2FF
+}
+
+.get-helen.get-blue.get-org-chart .get-oc-c .get-text {
+    fill: #0072C6
+}
+
+.get-helen.get-darkpurple.get-org-chart .get-oc-c .get-text {
+    fill: #4617B4
+}
+
+.get-helen.get-purple.get-org-chart .get-oc-c .get-text {
+    fill: #8C0095
+}
+
+.get-helen.get-mediumdarkblue.get-org-chart .get-oc-c .get-text {
+    fill: #004B8B
+}
+
+.get-helen.get-darkblue.get-org-chart .get-oc-c .get-text {
+    fill: #001940
+}
+
+.get-helen.get-cordovan.get-org-chart .get-oc-c .get-text {
+    fill: #570000
+}
+
+.get-helen.get-darkcordovan.get-org-chart .get-oc-c .get-text {
+    fill: #380000
+}
+
+.get-helen.get-neutralgrey.get-org-chart .get-oc-c .get-text {
+    fill: #585858
+}
+
+.get-helen.get-black.get-org-chart .get-oc-c .get-text {
+    fill: #000
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-darkred .get-text {
+    fill: #AC193D
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-pink .get-text {
+    fill: #DC4FAD
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-darkorange .get-text {
+    fill: #D24726
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-orange .get-text {
+    fill: #FF8F32
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-lightgreen .get-text {
+    fill: #82BA00
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-green .get-text {
+    fill: #008A17
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-lightteal .get-text {
+    fill: #03B3B2
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-teal .get-text {
+    fill: #008299
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-lightblue .get-text {
+    fill: #5DB2FF
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-blue .get-text {
+    fill: #0072C6
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-darkpurple .get-text {
+    fill: #4617B4
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-purple .get-text {
+    fill: #8C0095
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-mediumdarkblue .get-text {
+    fill: #004B8B
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-darkblue .get-text {
+    fill: #001940
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-cordovan .get-text {
+    fill: #570000
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-darkcordovan .get-text {
+    fill: #380000
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-neutralgrey .get-text {
+    fill: #585858
+}
+
+div.get-helen.get-org-chart .get-oc-c .get-black .get-text {
+    fill: #000
+}
+
+.get-eve.get-org-chart .get-oc-c .get-text-0 {
+    font-size: 60px
+}
+
+.get-monica.get-org-chart .get-oc-c .get-text-0 {
+    font-size: 60px
+}
+
+.get-vivian.get-org-chart .get-oc-c .get-text-0 {
+    font-size: 60px
+}

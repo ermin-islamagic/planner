@@ -28,6 +28,9 @@ class CO_Controller extends CI_Controller
                 $this->load->model($this->uri->segment(1) . '_m', 'connection');
             }
         }
+
+        // Load pagination config
+        $this->config->load('pagination');
     }
 
     /**
@@ -82,18 +85,29 @@ class CO_Controller extends CI_Controller
             $clean;
     }
 
-
-    public function index()
+    public function index($current_page = null)
     {
-        $this->render(array('pages/' . $this->_controller_slug . '/read'),$this->_data);
-    }
+        // Build pagination
+        $this->_data['pagination_setting'] = $this->connection->build_pagination($this->_controller_slug);
 
+        // Load data items.
+        $this->_data['rows'] = isset($this->connection) ?
+            $this->connection->get_rows(
+                $this->_controller_slug,
+                $this->_data['pagination_setting']['items_per_page'],
+                $current_page //$this->_data['pagination_setting']['current_page']
+            ) : array();
+
+        // Render views
+        $this->render(array('pages/' . $this->_controller_slug . '/read'), $this->_data);
+    }
+    
     public function create()
     {
         $this->render(array('pages/' . $this->_controller_slug . '/create'),$this->_data);
     }
 
-    public function update()
+    public function update($type = null, $id = null)
     {
         $this->render(array('pages/' . $this->_controller_slug . '/update'),$this->_data);
     }
@@ -106,9 +120,23 @@ class CO_Controller extends CI_Controller
     /**
      * Document type
      */
-    public function type($type = 'all')
+    public function type($type = 'all', $current_page = null)
     {
-        $this->render(array('pages/' . $this->_controller_slug . '/read'),$this->_data);
+
+        // Build pagination
+        $this->_data['pagination_setting'] = $this->connection->build_pagination_with_type($this->_controller_slug, $type);
+
+        // Load data items.
+        $this->_data['rows'] = isset($this->connection) ?
+            $this->connection->get_rows_with_type(
+                $this->_controller_slug,
+                $type,
+                $this->_data['pagination_setting']['items_per_page'],
+                $current_page //$this->_data['pagination_setting']['current_page']
+            ) : array();
+
+        // Render views
+        $this->render(array('pages/' . $this->_controller_slug . '/read'), $this->_data);
     }
 
     /**

@@ -6,11 +6,16 @@ class People extends CO_Controller
     public function __construct()
     {
         parent::__construct();
-    }
 
-    public function index()
-    {
-        $this->render(array('pages/' . $this->_controller_slug . '/read'));
+        $this->_data['types'] = array(
+            'co-employee' => 'CO Employee',
+            'lead' => 'Lead',
+            'prospect' => 'Prospect',
+            'mql' => 'MQL',
+            'sql' => 'SQL',
+            'client' => 'Client',
+            'vendor' => 'Vendor',
+            'partner' => 'Partner'
+        );
     }
-
 }

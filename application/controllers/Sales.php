@@ -6,10 +6,13 @@ class Sales extends CO_Controller
     public function __construct()
     {
         parent::__construct();
+
+        $this->_data['types'] = array(
+            'lead' => 'Lead',
+            'prospect' => 'Prospect',
+            'mql' => 'MQL',
+            'sql' => 'SQL',
+        );
     }
 
-    public function index()
-    {
-        $this->render(array('pages/' . $this->_controller_slug . '/read'));
-    }
 }

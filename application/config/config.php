@@ -505,6 +505,12 @@ $config['proxy_ips'] = '';
 |--------------------------------------------------------------------------
 |
 */
+// Number of items
+$config['items_list_array'] = array(5 => '5', 10 => '10', 20 => '20', 50 => '50' , 100 =>'100', 'All' =>'All');
+
+// Default items per page
+$config['per_page'] = 20;
+
 $config['site_config'] = array(
     'logo' => 'https://placeholdit.imgix.net/~text?txtsize=33&txt=logo&w=320&h=87',
     'text' => 'COP',
@@ -512,11 +518,11 @@ $config['site_config'] = array(
         'finance' => 'Finance',
         'legal' => 'Legal',
         'organisation' => 'Org&amp;Hr',
-        'planner' => 'Planner',
         'projects' => 'Projects',
         'sales' => 'Sales',
         'people' => 'People',
         'suppliers' => 'Suppliers',
+//        'planner' => 'Planner',
     ),
     'standard_navigation' => array(
         'authentication' => 'Authentication',

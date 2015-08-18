@@ -13,9 +13,9 @@
 
                         <!-- Select Basic -->
                         <div class="form-group">
-                            <label class="col-md-2 control-label" for="select-template">Agreement type</label>
+                            <label class="col-md-2 control-label" for="type">Agreement type</label>
                             <div class="col-md-10">
-                                <select id="select-template" name="select-template" class="form-control">
+                                <select id="type" name="type" class="form-control">
                                     <option value="contracts">Contracts</option>
                                     <option value="non-disclosure-agreement">NON-DISCLOSURE AGREEMENT (NDA)</option>
                                     <option value="purchase-order">PURCHASE ORDER</option>
@@ -33,9 +33,9 @@
 
                         <!-- Text input-->
                         <div class="form-group">
-                            <label class="col-md-2 control-label" for="gdrive">or agreement url</label>
+                            <label class="col-md-2 control-label" for="url">or agreement url</label>
                             <div class="col-md-10">
-                                <input id="gdrive" name="gdrive" type="text" placeholder="etc: https://docs.google.com/a/creativeoutsourcing.nl/spreadsheets/d/1_riUGCaG5H80Aakj48B07NVPYGUTGsA2Kw77k6WhQnk" class="form-control input-md">
+                                <input id="url" name="url" type="text" placeholder="etc: https://docs.google.com/a/creativeoutsourcing.nl/spreadsheets/d/1_riUGCaG5H80Aakj48B07NVPYGUTGsA2Kw77k6WhQnk" class="form-control input-md">
                             </div>
                         </div>
 

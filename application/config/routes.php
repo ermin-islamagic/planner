@@ -64,6 +64,7 @@ $route['finance'] =                                            "Finance";
 /* CRUD ITEM */
 $route['finance/type/(:any)'] =                                "Finance/type/$1";
 $route['finance/create'] =                                     "Finance/create";
+$route['finance/update/(:num)'] =                              "Finance/update/$1";
 $route['finance/type/(:any)/update/(:num)'] =                  "Finance/type/$1/update/$2";
 $route['finance/type/(:any)/delete/(:num)'] =                  "Finance/delete/$1";
 
@@ -79,18 +80,45 @@ $route['finance/type/(:any)/delete_type/(:num)'] =             "Finance/deleteTy
 $route['legal'] =                                              "Legal";
 
 /* CRUD ITEM */
-$route['legal/type/(:any)'] =                                  "Legal/type/$1";
+$route['legal/items'] =                                        "Legal/index";
+$route['legal/items/(:num)'] =                                 "Legal/index/$1";
+
+$route['legal/items/type/(:any)'] =                             "Legal/type/$1";
+$route['legal/items/type/(:any)/(:num)'] =                      "Legal/type/$1/$2";
+
+
+$route['legal/items/search/'] =                                "Legal/search/";
+$route['legal/items/search/(:num)'] =                          "Legal/search/$1";
 $route['legal/create'] =                                       "Legal/create";
-$route['legal/type/(:any)/update/(:num)'] =                    "Legal/type/$1/update/$2";
-$route['legal/type/(:any)/delete/(:num)'] =                    "Legal/delete/$1";
+$route['legal/update/(:num)'] =                                "Legal/update/$1";
+$route['legal/delete/(:num)'] =                                "Legal/delete/$1";
+
 
 /* CRUD TYPE */
 $route['legal/create_type'] =                                  "Legal/createType";
-$route['legal/type/(:any)/update_type'] =                      "Legal/updateType";
-$route['legal/type/(:any)/delete_type/(:num)'] =               "Legal/deleteType/$1";
+$route['legal/type/(:any)/update/(:num)'] =                    "Legal/type/update/$1/$2";
+$route['legal/type/(:any)/delete/(:num)'] =                    "Legal/delete/$1";
+//$route['legal/type/(:any)'] =                                  "Legal/type/$1";
+//$route['legal/type/(:any)/update_type'] =                      "Legal/updateType";
+//$route['legal/type/(:any)/delete_type/(:num)'] =               "Legal/deleteType/$1";
+
 
 //$route['legal/type/(:any)/search/(:any)'] =                  "Legal/type/$1/search/$2";
 //$route['legal/type/(:any)/search/(:any)/(:num)'] =           "Legal/type/$1/search/$2/$3";
+
+// admin users
+//$route['manage/users'] = "admin/users";
+//$route['manage/users/(:num)'] = "admin/users/index/$1";
+//$route['manage/users/search'] = "admin/users/search";
+//$route['manage/users/search/(:any)'] = "admin/users/search/$1";
+//$route['manage/users/add'] = "admin/users/add";
+//$route['manage/users/edit/(:num)'] = "admin/users/edit/$1";
+//$route['manage/users/remove/(:num)'] = "admin/users/remove/$1";
+
+
+
+
+
 
 
 $route['organisation'] =                                         "Organisation";
@@ -98,6 +126,7 @@ $route['organisation'] =                                         "Organisation";
 /* CRUD ITEM */
 $route['organisation/type/(:any)'] =                             "Organisation/type/$1";
 $route['organisation/create'] =                                  "Organisation/create";
+$route['organisation/update/(:num)'] =                           "Organisation/update/$1";
 $route['organisation/type/(:any)/update/(:num)'] =               "Organisation/type/$1/update/$2";
 $route['organisation/type/(:any)/delete/(:num)'] =               "Organisation/delete/$1";
 
@@ -118,6 +147,7 @@ $route['planner'] = "Planner";
 /* CRUD ITEM */
 $route['planner/type/(:any)'] =                             "planner/type/$1";
 $route['planner/create'] =                                  "planner/create";
+$route['planner/update/(:num)'] =                           "planner/update/$1";
 $route['planner/type/(:any)/update/(:num)'] =               "planner/type/$1/update/$2";
 $route['planner/type/(:any)/delete/(:num)'] =               "planner/delete/$1";
 
@@ -135,6 +165,7 @@ $route['projects'] = "Projects";
 /* CRUD ITEM */
 $route['projects/type/(:any)'] =                             "projects/type/$1";
 $route['projects/create'] =                                  "projects/create";
+$route['projects/update/(:num)'] =                           "projects/update/$1";
 $route['projects/type/(:any)/update/(:num)'] =               "projects/type/$1/update/$2";
 $route['projects/type/(:any)/delete/(:num)'] =               "projects/delete/$1";
 
@@ -152,6 +183,7 @@ $route['suppliers'] = "Suppliers";
 /* CRUD ITEM */
 $route['suppliers/type/(:any)'] =                             "suppliers/type/$1";
 $route['suppliers/create'] =                                  "suppliers/create";
+$route['suppliers/update/(:num)'] =                           "suppliers/update/$1";
 $route['suppliers/type/(:any)/update/(:num)'] =               "suppliers/type/$1/update/$2";
 $route['suppliers/type/(:any)/delete/(:num)'] =               "suppliers/delete/$1";
 
@@ -169,6 +201,7 @@ $route['people'] = "People";
 /* CRUD ITEM */
 $route['people/type/(:any)'] =                             "people/type/$1";
 $route['people/create'] =                                  "people/create";
+$route['people/update/(:num)'] =                           "people/update/$1";
 $route['people/type/(:any)/update/(:num)'] =               "people/type/$1/update/$2";
 $route['people/type/(:any)/delete/(:num)'] =               "people/delete/$1";
 
@@ -186,6 +219,7 @@ $route['sales'] = "Sales";
 /* CRUD ITEM */
 $route['sales/type/(:any)'] =                             "sales/type/$1";
 $route['sales/create'] =                                  "sales/create";
+$route['sales/update/(:num)'] =                           "sales/update/$1";
 $route['sales/type/(:any)/update/(:num)'] =               "sales/type/$1/update/$2";
 $route['sales/type/(:any)/delete/(:num)'] =               "sales/delete/$1";
 
