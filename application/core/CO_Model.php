@@ -288,16 +288,34 @@ class CO_Model extends CI_Model
     public function save_file($field = 'userfile'){
 
         // File upload config
-        $config = $this->config->item('save_file');
+        $config = $this->config->item('documents');
 
         // Init config
-        $this->load->library('upload', $config);
+        $this->load->library('upload');
+
+        $this->upload->initialize($config); // Make sure it has been initialized
 
         // Upload file
-        if(!$this->upload->do_upload($field)){
-            return array('error' => $this->upload->display_errors());
+        if(!$this->upload->do_upload($field) && !empty($_FILES[$field]['name'])){
+
+            // Return message
+            return array('type' => 'danger', 'message' => $this->upload->display_errors(), 'file_id' => null);
         }else{
-            return array('upload_data' => $this->upload->data());
+
+            // Register new file into database
+            $this->db->insert('files', $this->upload->data());
+
+            // Get last insert ID
+            $file_id = ($this->db->insert_id()) ? $this->db->insert_id() : null;
+
+            // Prevent new file insert
+            $this->db->stop_cache();
+
+            // Flush cache
+            $this->db->flush_cache();
+
+            // Return message
+            return array('type' => 'success', 'message' => 'File saved successfully', 'file_id' => $file_id);
         }
     }
 

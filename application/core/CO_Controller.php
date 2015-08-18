@@ -106,9 +106,13 @@ class CO_Controller extends CI_Controller
     public function create()
     {
         // Save userfile
-        $data = $this->connection->save_file();
+        if(array_key_exists('save', $this->input->post())){
 
-        print_r($data);
+            // Return message with saved file id ( default: null )
+            $data = $this->connection->save_file();
+
+
+        }
 
         // Render views
         $this->render(array('pages/' . $this->_controller_slug . '/create'),$this->_data);
