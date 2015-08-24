@@ -109,9 +109,11 @@ class CO_Controller extends CI_Controller
         if(array_key_exists('save', $this->input->post())){
 
             // Return message with saved file id ( default: null )
-            $data = $this->connection->save_file();
+            $data[] = $this->connection->save_file();
 
+            $data[] = $this->connection->insert_row(array('file_id' => $data['file_id']));
 
+            print_r($data);
         }
 
         // Render views

@@ -257,10 +257,12 @@ class CO_Model extends CI_Model
     /**
      * Returns rows with types from database
      *
+     * @param $_controller_slug String Model name
+     * @param $type String Category name
      * @param $limit Int Limit result
      * @param $start Int Offset result
-     * @param null String $search If set searchable items would be count in
-     * @return mixed array Return rows of items
+     * @param String $search If set searchable items would be count in
+     * @return mixed Return rows of items
      */
     public function get_rows_with_type($_controller_slug, $type, $limit, $start, $search = null){
         $this->db->select('*');
@@ -278,6 +280,19 @@ class CO_Model extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+
+    /**
+     * @param $joins Array Join fields ( etc: array('file_id' => 2) )
+     * @return array Return message
+     */
+    public function insert_row($_controller_slug, $joins){
+
+        // Register new file into database
+        $this->db->insert($_controller_slug, $this->upload->data());
+
+        return array('type' => 'success', 'message' => 'Successfully saved!');
+    }
+
 
     /**
      * Function saves one file only
